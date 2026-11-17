@@ -1,0 +1,949 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "fruits",
+      "nameAudio": {
+        "en": "category_fruits_en.m4a",
+        "ar": "category_fruits_ar.m4a"
+      }
+    },
+    {
+      "id": "vegetables",
+      "nameAudio": {
+        "en": "category_vegetables_en.m4a",
+        "ar": "category_vegetables_ar.m4a"
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "apple",
+      "category": "fruits",
+      "svg": "apple.svg",
+      "name": {
+        "en": "Apple",
+        "ar": "تفاحة"
+      },
+      "colorSentence": {
+        "en": "Apples can be red!",
+        "ar": "التفاح يمكن أن يكون أحمر!"
+      },
+      "nameAudio": {
+        "en": "apple_en.m4a",
+        "ar": "apple_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "apple_sentence_en.m4a",
+        "ar": "apple_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "body",
+          "suggested": [
+            "#E53935",
+            "#43A047",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "stem",
+          "suggested": [
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "leaf",
+          "suggested": [
+            "#43A047"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "banana",
+      "category": "fruits",
+      "svg": "banana.svg",
+      "name": {
+        "en": "Banana",
+        "ar": "موزة"
+      },
+      "colorSentence": {
+        "en": "Bananas are yellow!",
+        "ar": "الموز لونه أصفر!"
+      },
+      "nameAudio": {
+        "en": "banana_en.m4a",
+        "ar": "banana_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "banana_sentence_en.m4a",
+        "ar": "banana_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "body",
+          "suggested": [
+            "#FDD835",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "stem",
+          "suggested": [
+            "#6D4C41",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "tip",
+          "suggested": [
+            "#6D4C41"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orange",
+      "category": "fruits",
+      "svg": "orange.svg",
+      "name": {
+        "en": "Orange",
+        "ar": "برتقالة"
+      },
+      "colorSentence": {
+        "en": "Oranges are orange!",
+        "ar": "البرتقال لونه برتقالي!"
+      },
+      "nameAudio": {
+        "en": "orange_en.m4a",
+        "ar": "orange_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "orange_sentence_en.m4a",
+        "ar": "orange_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "body",
+          "suggested": [
+            "#FB8C00",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "stem",
+          "suggested": [
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "leaf",
+          "suggested": [
+            "#43A047"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "strawberry",
+      "category": "fruits",
+      "svg": "strawberry.svg",
+      "name": {
+        "en": "Strawberry",
+        "ar": "فراولة"
+      },
+      "colorSentence": {
+        "en": "Strawberries are red!",
+        "ar": "الفراولة لونها أحمر!"
+      },
+      "nameAudio": {
+        "en": "strawberry_en.m4a",
+        "ar": "strawberry_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "strawberry_sentence_en.m4a",
+        "ar": "strawberry_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "body",
+          "suggested": [
+            "#E53935",
+            "#F06292"
+          ]
+        },
+        {
+          "id": "stem",
+          "suggested": [
+            "#43A047",
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "leaves",
+          "suggested": [
+            "#43A047"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grapes",
+      "category": "fruits",
+      "svg": "grapes.svg",
+      "name": {
+        "en": "Grapes",
+        "ar": "عنب"
+      },
+      "colorSentence": {
+        "en": "Grapes can be purple!",
+        "ar": "العنب يمكن أن يكون بنفسجيًا!"
+      },
+      "nameAudio": {
+        "en": "grapes_en.m4a",
+        "ar": "grapes_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "grapes_sentence_en.m4a",
+        "ar": "grapes_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "stem",
+          "suggested": [
+            "#6D4C41",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "leaf",
+          "suggested": [
+            "#43A047"
+          ]
+        },
+        {
+          "id": "topRow",
+          "suggested": [
+            "#8E24AA",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "middleRow",
+          "suggested": [
+            "#8E24AA",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "bottom",
+          "suggested": [
+            "#8E24AA",
+            "#43A047"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "watermelon",
+      "category": "fruits",
+      "svg": "watermelon.svg",
+      "name": {
+        "en": "Watermelon",
+        "ar": "بطيخ"
+      },
+      "colorSentence": {
+        "en": "Watermelons are red inside!",
+        "ar": "البطيخ أحمر من الداخل!"
+      },
+      "nameAudio": {
+        "en": "watermelon_en.m4a",
+        "ar": "watermelon_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "watermelon_sentence_en.m4a",
+        "ar": "watermelon_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "rind",
+          "suggested": [
+            "#43A047"
+          ]
+        },
+        {
+          "id": "whiteRind",
+          "suggested": [
+            "#FDD835",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "flesh",
+          "suggested": [
+            "#E53935",
+            "#F06292"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pear",
+      "category": "fruits",
+      "svg": "pear.svg",
+      "name": {
+        "en": "Pear",
+        "ar": "كمثرى"
+      },
+      "colorSentence": {
+        "en": "Pears can be green!",
+        "ar": "الكمثرى يمكن أن تكون خضراء!"
+      },
+      "nameAudio": {
+        "en": "pear_en.m4a",
+        "ar": "pear_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "pear_sentence_en.m4a",
+        "ar": "pear_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "body",
+          "suggested": [
+            "#43A047",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "stem",
+          "suggested": [
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "leaf",
+          "suggested": [
+            "#43A047"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cherry",
+      "category": "fruits",
+      "svg": "cherry.svg",
+      "name": {
+        "en": "Cherry",
+        "ar": "كرز"
+      },
+      "colorSentence": {
+        "en": "Cherries are red!",
+        "ar": "الكرز لونه أحمر!"
+      },
+      "nameAudio": {
+        "en": "cherry_en.m4a",
+        "ar": "cherry_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "cherry_sentence_en.m4a",
+        "ar": "cherry_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "stems",
+          "suggested": [
+            "#43A047",
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "leaf",
+          "suggested": [
+            "#43A047"
+          ]
+        },
+        {
+          "id": "leftCherry",
+          "suggested": [
+            "#E53935"
+          ]
+        },
+        {
+          "id": "rightCherry",
+          "suggested": [
+            "#E53935"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pineapple",
+      "category": "fruits",
+      "svg": "pineapple.svg",
+      "name": {
+        "en": "Pineapple",
+        "ar": "أناناس"
+      },
+      "colorSentence": {
+        "en": "Pineapples are yellow!",
+        "ar": "الأناناس لونه أصفر!"
+      },
+      "nameAudio": {
+        "en": "pineapple_en.m4a",
+        "ar": "pineapple_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "pineapple_sentence_en.m4a",
+        "ar": "pineapple_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "leftLeaf",
+          "suggested": [
+            "#43A047"
+          ]
+        },
+        {
+          "id": "rightLeaf",
+          "suggested": [
+            "#43A047"
+          ]
+        },
+        {
+          "id": "middleLeaf",
+          "suggested": [
+            "#43A047"
+          ]
+        },
+        {
+          "id": "body",
+          "suggested": [
+            "#FDD835",
+            "#FB8C00",
+            "#6D4C41"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mango",
+      "category": "fruits",
+      "svg": "mango.svg",
+      "name": {
+        "en": "Mango",
+        "ar": "مانجو"
+      },
+      "colorSentence": {
+        "en": "Mangoes can be orange!",
+        "ar": "المانجو يمكن أن يكون برتقاليًا!"
+      },
+      "nameAudio": {
+        "en": "mango_en.m4a",
+        "ar": "mango_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "mango_sentence_en.m4a",
+        "ar": "mango_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "body",
+          "suggested": [
+            "#FB8C00",
+            "#FDD835",
+            "#E53935",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "stem",
+          "suggested": [
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "leaf",
+          "suggested": [
+            "#43A047"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "carrot",
+      "category": "vegetables",
+      "svg": "carrot.svg",
+      "name": {
+        "en": "Carrot",
+        "ar": "جزرة"
+      },
+      "colorSentence": {
+        "en": "Carrots are orange!",
+        "ar": "الجزر لونه برتقالي!"
+      },
+      "nameAudio": {
+        "en": "carrot_en.m4a",
+        "ar": "carrot_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "carrot_sentence_en.m4a",
+        "ar": "carrot_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "leftLeaf",
+          "suggested": [
+            "#43A047"
+          ]
+        },
+        {
+          "id": "rightLeaf",
+          "suggested": [
+            "#43A047"
+          ]
+        },
+        {
+          "id": "middleLeaf",
+          "suggested": [
+            "#43A047"
+          ]
+        },
+        {
+          "id": "body",
+          "suggested": [
+            "#FB8C00"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tomato",
+      "category": "vegetables",
+      "svg": "tomato.svg",
+      "name": {
+        "en": "Tomato",
+        "ar": "طماطم"
+      },
+      "colorSentence": {
+        "en": "Tomatoes are red!",
+        "ar": "الطماطم لونها أحمر!"
+      },
+      "nameAudio": {
+        "en": "tomato_en.m4a",
+        "ar": "tomato_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "tomato_sentence_en.m4a",
+        "ar": "tomato_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "body",
+          "suggested": [
+            "#E53935",
+            "#FB8C00",
+            "#FDD835",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "stem",
+          "suggested": [
+            "#43A047",
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "leaves",
+          "suggested": [
+            "#43A047"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "broccoli",
+      "category": "vegetables",
+      "svg": "broccoli.svg",
+      "name": {
+        "en": "Broccoli",
+        "ar": "بروكلي"
+      },
+      "colorSentence": {
+        "en": "Broccoli is green!",
+        "ar": "البروكلي لونه أخضر!"
+      },
+      "nameAudio": {
+        "en": "broccoli_en.m4a",
+        "ar": "broccoli_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "broccoli_sentence_en.m4a",
+        "ar": "broccoli_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "stalk",
+          "suggested": [
+            "#43A047",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "leftTop",
+          "suggested": [
+            "#43A047"
+          ]
+        },
+        {
+          "id": "rightTop",
+          "suggested": [
+            "#43A047"
+          ]
+        },
+        {
+          "id": "middleTop",
+          "suggested": [
+            "#43A047"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eggplant",
+      "category": "vegetables",
+      "svg": "eggplant.svg",
+      "name": {
+        "en": "Eggplant",
+        "ar": "باذنجان"
+      },
+      "colorSentence": {
+        "en": "Eggplants are purple!",
+        "ar": "الباذنجان لونه بنفسجي!"
+      },
+      "nameAudio": {
+        "en": "eggplant_en.m4a",
+        "ar": "eggplant_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "eggplant_sentence_en.m4a",
+        "ar": "eggplant_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "body",
+          "suggested": [
+            "#8E24AA"
+          ]
+        },
+        {
+          "id": "stem",
+          "suggested": [
+            "#43A047",
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "cap",
+          "suggested": [
+            "#43A047"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "corn",
+      "category": "vegetables",
+      "svg": "corn.svg",
+      "name": {
+        "en": "Corn",
+        "ar": "ذرة"
+      },
+      "colorSentence": {
+        "en": "Corn is yellow!",
+        "ar": "الذرة لونها أصفر!"
+      },
+      "nameAudio": {
+        "en": "corn_en.m4a",
+        "ar": "corn_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "corn_sentence_en.m4a",
+        "ar": "corn_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "cob",
+          "suggested": [
+            "#FDD835",
+            "#FB8C00"
+          ]
+        },
+        {
+          "id": "leftHusk",
+          "suggested": [
+            "#43A047"
+          ]
+        },
+        {
+          "id": "rightHusk",
+          "suggested": [
+            "#43A047"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "potato",
+      "category": "vegetables",
+      "svg": "potato.svg",
+      "name": {
+        "en": "Potato",
+        "ar": "بطاطس"
+      },
+      "colorSentence": {
+        "en": "Potatoes are brown!",
+        "ar": "البطاطس لونها بني!"
+      },
+      "nameAudio": {
+        "en": "potato_en.m4a",
+        "ar": "potato_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "potato_sentence_en.m4a",
+        "ar": "potato_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "body",
+          "suggested": [
+            "#6D4C41",
+            "#FDD835",
+            "#FB8C00"
+          ]
+        },
+        {
+          "id": "leftSpot",
+          "suggested": [
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "rightSpot",
+          "suggested": [
+            "#6D4C41"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cucumber",
+      "category": "vegetables",
+      "svg": "cucumber.svg",
+      "name": {
+        "en": "Cucumber",
+        "ar": "خيار"
+      },
+      "colorSentence": {
+        "en": "Cucumbers are green!",
+        "ar": "الخيار لونه أخضر!"
+      },
+      "nameAudio": {
+        "en": "cucumber_en.m4a",
+        "ar": "cucumber_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "cucumber_sentence_en.m4a",
+        "ar": "cucumber_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "body",
+          "suggested": [
+            "#43A047",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "leaf",
+          "suggested": [
+            "#43A047"
+          ]
+        },
+        {
+          "id": "flower",
+          "suggested": [
+            "#FDD835",
+            "#FB8C00"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pumpkin",
+      "category": "vegetables",
+      "svg": "pumpkin.svg",
+      "name": {
+        "en": "Pumpkin",
+        "ar": "يقطين"
+      },
+      "colorSentence": {
+        "en": "Pumpkins are orange!",
+        "ar": "اليقطين لونه برتقالي!"
+      },
+      "nameAudio": {
+        "en": "pumpkin_en.m4a",
+        "ar": "pumpkin_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "pumpkin_sentence_en.m4a",
+        "ar": "pumpkin_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "leftSide",
+          "suggested": [
+            "#FB8C00",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "rightSide",
+          "suggested": [
+            "#FB8C00",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "stem",
+          "suggested": [
+            "#6D4C41",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "leaf",
+          "suggested": [
+            "#43A047"
+          ]
+        },
+        {
+          "id": "middle",
+          "suggested": [
+            "#FB8C00",
+            "#FDD835"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "onion",
+      "category": "vegetables",
+      "svg": "onion.svg",
+      "name": {
+        "en": "Onion",
+        "ar": "بصل"
+      },
+      "colorSentence": {
+        "en": "Onions can be purple!",
+        "ar": "البصل يمكن أن يكون بنفسجيًا!"
+      },
+      "nameAudio": {
+        "en": "onion_en.m4a",
+        "ar": "onion_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "onion_sentence_en.m4a",
+        "ar": "onion_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "roots",
+          "suggested": [
+            "#6D4C41",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "leftShoot",
+          "suggested": [
+            "#43A047"
+          ]
+        },
+        {
+          "id": "rightShoot",
+          "suggested": [
+            "#43A047"
+          ]
+        },
+        {
+          "id": "bulb",
+          "suggested": [
+            "#8E24AA",
+            "#FDD835",
+            "#6D4C41"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "peas",
+      "category": "vegetables",
+      "svg": "peas.svg",
+      "name": {
+        "en": "Peas",
+        "ar": "بازلاء"
+      },
+      "colorSentence": {
+        "en": "Peas are green!",
+        "ar": "البازلاء لونها أخضر!"
+      },
+      "nameAudio": {
+        "en": "peas_en.m4a",
+        "ar": "peas_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "peas_sentence_en.m4a",
+        "ar": "peas_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "stem",
+          "suggested": [
+            "#43A047",
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "pod",
+          "suggested": [
+            "#43A047"
+          ]
+        },
+        {
+          "id": "leftPea",
+          "suggested": [
+            "#43A047",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "middlePea",
+          "suggested": [
+            "#43A047",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "rightPea",
+          "suggested": [
+            "#43A047",
+            "#FDD835"
+          ]
+        }
+      ]
+    }
+  ]
+}
