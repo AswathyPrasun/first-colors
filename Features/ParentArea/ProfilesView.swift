@@ -84,6 +84,7 @@ struct ProfilesView: View {
             }
         }
         .navigationTitle("Profiles")
+        .navigationBarTitleDisplayMode(.inline)
         .confirmationDialog(
             "Delete this profile?",
             isPresented: Binding(get: { vm.pendingDelete != nil }, set: { if !$0 { vm.pendingDelete = nil } }),

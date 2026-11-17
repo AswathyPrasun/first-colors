@@ -67,6 +67,11 @@ final class ScreenshotTourUITests: XCTestCase {
         app.buttons["parentExport"].tap()
         sleep(2)
         shot("10-save-to-photos")
+        app.navigationBars.buttons.firstMatch.tap()
+        XCTAssertTrue(app.buttons["parentProfiles"].waitForExistence(timeout: 5))
+        app.buttons["parentProfiles"].tap()
+        sleep(2)
+        shot("11-profiles")
     }
 
     /// The parent area at the largest accessibility text size.

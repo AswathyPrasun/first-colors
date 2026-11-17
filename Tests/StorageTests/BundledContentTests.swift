@@ -12,6 +12,12 @@ struct BundledContentTests {
         KidsColoring.Category.allCases.flatMap { repo.items(in: $0) }
     }
 
+    /// All design tokens are fixed light colors. Without this key, Dark Mode turns system list rows
+    /// and titles dark on top of our light backgrounds (unreadable parent area).
+    @Test func appIsLockedToLightAppearance() {
+        #expect(Bundle.main.object(forInfoDictionaryKey: "UIUserInterfaceStyle") as? String == "Light")
+    }
+
     @Test func shipsTenFruitsAndTenVegetables() {
         #expect(repo.items(in: .fruits).map(\.id) ==
                 ["apple", "banana", "orange", "strawberry", "grapes", "watermelon", "pear", "cherry", "pineapple", "mango"])

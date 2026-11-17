@@ -113,6 +113,7 @@ struct ExportArtView: View {
             }
         }
         .navigationTitle("Save to Photos")
+        .navigationBarTitleDisplayMode(.inline)
         .background(DSColor.parentBg)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
