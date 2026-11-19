@@ -39,11 +39,15 @@ struct DrawingCanvas: View {
         return String(localized: "\(colored) of \(drawing.regions.count) parts colored")
     }
 
-    /// "leftLeaf" → "left leaf", "body" → "body".
+    /// "leftLeaf" → "left leaf", "front_wheel" → "front wheel", "body" → "body".
     static func spokenName(_ regionId: String) -> String {
         var words = ""
         for character in regionId {
-            if character.isUppercase, !words.isEmpty { words.append(" ") }
+            if character == "_" || character == "-" {
+                if !words.isEmpty, words.last != " " { words.append(" ") }
+                continue
+            }
+            if character.isUppercase, !words.isEmpty, words.last != " " { words.append(" ") }
             words.append(character.lowercased())
         }
         return words

@@ -18,7 +18,7 @@ struct PickerView: View {
 
     var body: some View {
         VStack(spacing: DSMetrics.spacing) {
-            KidHeader(title: String(localized: vm.category.titleResource),
+            KidHeader(title: String(localized: vm.category.details.title),
                       onBack: vm.back,
                       onSpeak: vm.speakCategory)
             ScrollView {
@@ -31,7 +31,7 @@ struct PickerView: View {
                 .padding(.bottom, 24)
             }
         }
-        .kidScreen(background: vm.category.screenBackground)
+        .kidScreen(background: vm.category.details.screenBackground)
         .task { await vm.refresh() }
     }
 

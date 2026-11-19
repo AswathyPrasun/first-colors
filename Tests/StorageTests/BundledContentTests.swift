@@ -18,11 +18,30 @@ struct BundledContentTests {
         #expect(Bundle.main.object(forInfoDictionaryKey: "UIUserInterfaceStyle") as? String == "Light")
     }
 
-    @Test func shipsTenFruitsAndTenVegetables() {
-        #expect(repo.items(in: .fruits).map(\.id) ==
-                ["apple", "banana", "orange", "strawberry", "grapes", "watermelon", "pear", "cherry", "pineapple", "mango"])
-        #expect(repo.items(in: .vegetables).map(\.id) ==
-                ["carrot", "tomato", "broccoli", "eggplant", "corn", "potato", "cucumber", "pumpkin", "onion", "peas"])
+    @Test func shipsTenItemsPerCategoryInOrder() {
+        let expected: [KidsColoring.Category: [String]] = [
+            .fruits: ["apple", "banana", "orange", "strawberry", "grapes", "watermelon", "pear", "cherry",
+                      "pineapple", "mango"],
+            .vegetables: ["carrot", "tomato", "broccoli", "eggplant", "corn", "potato", "cucumber", "pumpkin",
+                          "onion", "peas"],
+            .vehicles: ["car", "bus", "fire_truck", "police_car", "ambulance", "train", "airplane", "boat",
+                        "tractor", "rocket"],
+            .rescuePups: ["fire_pup", "doctor_pup", "builder_pup", "swim_pup", "farm_pup", "mail_pup",
+                          "garden_pup", "snow_pup", "chef_pup", "pilot_pup"],
+            .superKids: ["little_star", "heart_boy", "sun_hero", "moon_hero", "cloud_kid", "flower_hero",
+                         "rainbow_hero", "cape_kitty", "hero_bear", "music_hero"],
+        ]
+        for category in KidsColoring.Category.allCases {
+            #expect(repo.items(in: category).map(\.id) == expected[category], "\(category)")
+        }
+    }
+
+    @Test func everyCategoryCoverIsAShippedDrawing() {
+        for category in KidsColoring.Category.allCases {
+            let cover = category.details.coverItemId
+            #expect(repo.item(id: cover)?.category == category, "\(category) cover \(cover)")
+            #expect(repo.drawing(for: cover) != nil, "\(category) cover drawing")
+        }
     }
 
     @Test func everyItemHasTextAndAudioNamesInBothLanguages() {
@@ -40,8 +59,9 @@ struct BundledContentTests {
                 #expect(audioFiles.insert(ar).inserted, "duplicate audio \(ar)")
             }
         }
-        for category in KidsColoring.Category.allCases {
-            #expect(repo.categoryInfo(category)?.nameAudio != nil)
+        // Every category that ships drawings has its spoken name (empty categories are hidden).
+        for category in KidsColoring.Category.allCases where !repo.items(in: category).isEmpty {
+            #expect(repo.categoryInfo(category)?.nameAudio != nil, "\(category) name audio")
         }
     }
 
@@ -55,9 +75,10 @@ struct BundledContentTests {
         }
     }
 
-    @Test func suggestedColorsComeFromTheKidPalette() {
-        let palette = Set(KidPalette.colors.map(\.hex))
+    /// Suggestions must be colors the child can actually pick on that picture's screen.
+    @Test func suggestedColorsComeFromTheCategoryPalette() {
         for item in allItems {
+            let palette = Set(item.category.details.palette.map(\.hex))
             for region in item.regions {
                 #expect(!region.suggested.isEmpty, "\(item.id).\(region.id) needs a suggestion")
                 for hex in region.suggested {

@@ -16,7 +16,7 @@ struct RoundIconButton: View {
                 .frame(width: size, height: size)
         }
         .buttonStyle(ToyButtonStyle(shape: Circle(), fill: DSColor.card, shadow: DSColor.cardShadow))
-        .accessibilityLabel(Text(accessibilityLabel))
+        .accessibilityLabel(accessibilityLabel)
     }
 }
 
@@ -102,7 +102,7 @@ struct PrimaryButton: View {
 struct BigTile<Content: View>: View {
     let fill: Color
     let shadow: Color
-    let accessibilityLabel: LocalizedStringKey
+    let accessibilityLabel: Text
     let action: () -> Void
     @ViewBuilder let content: () -> Content
 
@@ -117,6 +117,6 @@ struct BigTile<Content: View>: View {
             shadow: shadow,
             depth: DSMetrics.tileShadow,
             pressedScale: 0.96))
-        .accessibilityLabel(Text(accessibilityLabel))
+        .accessibilityLabel(accessibilityLabel)
     }
 }

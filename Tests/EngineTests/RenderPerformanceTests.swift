@@ -78,8 +78,10 @@ struct RenderPerformanceTests {
         ctx.restoreGState()
     }
 
-    @Test func twoThousandStrokesStayUnderOneFrame() throws {
-        let drawing = try #require(ContentRepository(bundle: .main).drawing(for: "apple"))
+    /// The apple (v1) plus the busiest v1.1 drawings: six regions, compound shapes and a ring with a hole.
+    @Test(arguments: ["apple", "fire_truck", "swim_pup", "garden_pup", "cloud_kid"])
+    func twoThousandStrokesStayUnderOneFrame(itemId: String) throws {
+        let drawing = try #require(ContentRepository(bundle: .main).drawing(for: itemId))
         let all = strokes(on: drawing, count: 2_000)
         let rasterizer = StrokeRasterizer()
 
@@ -158,7 +160,7 @@ struct RenderPerformanceTests {
             initialBuild, append, undo, regionRedraw, liveFrame, allLayers)
         print(report)
         if let dir = ProcessInfo.processInfo.environment["PERF_REPORT_DIR"] {
-            try? report.write(toFile: dir + "/perf.txt", atomically: true, encoding: .utf8)
+            try? report.write(toFile: dir + "/perf-\(itemId).txt", atomically: true, encoding: .utf8)
         }
 
         #expect(liveFrame < 16, "a live drawing frame took \(liveFrame)ms")

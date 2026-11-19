@@ -6,7 +6,9 @@ No reading needed, no failure states, no accounts, no network.
 
 - **Platforms:** iPhone (portrait) and iPad (portrait and landscape), iOS 17+
 - **Tech:** Swift 6, SwiftUI, MVVM + Coordinator, zero third-party dependencies
-- **Content:** 10 fruits and 10 vegetables, each 3–6 colorable parts with a friendly face
+- **Content:** 50 pictures in 5 categories: Fruits, Veggies, Vehicles, Rescue Pups and Super Kids
+  (10 each), each with 3–6 colorable parts and a friendly face. All characters are our own originals
+  (CLAUDE.md §2.9).
 
 `CLAUDE.md` is the source of truth for product rules, architecture and storage. This README covers
 building, testing, and adding content.
@@ -74,12 +76,15 @@ Drawings are generated from one Python file so ids, colors and art stay in sync.
    - 300×300 coordinate space, 3–6 regions, thick friendly shapes.
    - Region ids are stable forever. To redraw an item, make a **new item id** (`kiwi_v2`), never
      reuse region ids with different meanings: saved art refers to them.
-   - Suggested colors must come from the 8-color palette (`RED`, `ORANGE`, … at the top of the file).
+   - Suggested colors must come from the category's 8-color palette (`CategoryDetails.palette`;
+     constants such as `RED`, `SKY`, `GRAY` are at the top of the file).
+   - New category? Add a case to `Category`, one entry in `CategoryDetails` (title, cover, colors,
+     palette, cheer word, finish sound) and a row in `CATEGORIES` in `drawings.py`.
    - Overlap is fine: a later region (a leaf) hides the part of an earlier one (the body) under it.
      The app cuts the hidden part out automatically for fills, crayon and taps.
    - Use `circle()`, `face()` and any SVG path data (`M L H V C S Q T A Z`, absolute or relative).
-2. **Generate:** `python3 scripts/drawings.py` writes `Resources/Drawings/<id>.svg` and
-   `Resources/Content/content.json`.
+2. **Generate:** `python3 scripts/drawings.py` writes `Resources/Drawings/<id>.svg`,
+   `Resources/Content/content.json` and the voice-line list `Resources/Audio/README.md`.
 3. **Check it:** the content tests (`BundledContentTests`) verify every drawing loads, has 3–6
    regions, uses palette colors, stays inside the canvas, and that every region is big enough for
    a toddler's finger. To look at all the art:
@@ -88,7 +93,8 @@ Drawings are generated from one Python file so ids, colors and art stay in sync.
      -scheme KidsColoring -destination 'platform=iOS Simulator,name=iPhone 17' \
      -only-testing:KidsColoringTests/DrawingPreviewTests test
    ```
-   This writes `fruits.png`, `vegetables.png` (blank + suggested colors) and `metrics.tsv`.
+   This writes one sheet per category (`fruits.png`, `vehicles.png`, …: blank + suggested colors)
+   and `metrics.tsv`.
 4. **Add its voice lines** (next section).
 
 A drawing can also be authored in any SVG editor: one `<path id="regionId">` per region, face and
@@ -101,7 +107,7 @@ decorations inside `<g id="details">` (circles are filled, paths are stroked), `
 ### Voice lines (names and color sentences)
 
 Not recorded yet. `Resources/Audio/README.md` lists every file name and the exact words to say,
-in English and Arabic (84 files). To add recordings:
+in English and Arabic (210 files: 84 from 1.0, 126 added in 1.1). To add recordings:
 
 - Format: AAC `.m4a`, mono, 44.1 kHz, peaks around −3 dB, silence trimmed.
 - Put them in `Resources/Audio/en/` and `Resources/Audio/ar/` with exactly the listed names.
@@ -113,8 +119,9 @@ Until a file exists, **debug builds** speak the text with the system voice so yo
 
 ### Sound effects and music
 
-`sfx_tap`, `sfx_pop`, `sfx_sparkle`, `sfx_cheer`, `sfx_crayon_loop` and `music_loop` are
-synthesized (original, no licenses) by `python3 scripts/make_sounds.py`. Replace any of them with a
+`sfx_tap`, `sfx_pop`, `sfx_sparkle`, `sfx_cheer`, `sfx_crayon_loop`, `music_loop` and the 1.1
+finish sounds `sfx_vroom`, `sfx_woof`, `sfx_whoosh` are synthesized (original, no licenses) by
+`python3 scripts/make_sounds.py` (pass names to regenerate only those). Replace any of them with a
 recording of the same name to change it.
 
 All audio respects the Ring/Silent switch and the Sounds / Music / Voice language settings in the
@@ -161,3 +168,4 @@ always start at first launch and never touch real art.
 | `scripts/make_app_icon.sh` | Renders the placeholder app icon from `apple.svg` |
 | `scripts/check-no-network.sh` | Fails if any network API or URL appears in the code |
 | `scripts/ci.sh` | Full release gate |
+| `scripts/appstore-screenshots.sh` | App Store screenshots (iPhone 6.9", iPad 13") into `AppStore/screenshots/` |
