@@ -8,7 +8,8 @@ A **fully offline** iOS coloring app for **toddlers and kindergarten kids (ages 
 Kids pick a picture, tap regions to fill them with color, and the app **suggests realistic colors** for each region (e.g. apple body → red/green/yellow, leaf → green). Kids can still use any color — suggestions guide, never block.
 
 - **v1 categories:** Fruits 🍎 and Vegetables 🥕
-- **Later:** Animals, Vehicles, Shapes
+- **v1.1 categories:** Vehicles 🚗, Rescue Pups 🐶 and Super Kids 🦸 (our own original characters)
+- **Later:** Animals, Shapes
 
 ## 2. Non-negotiable principles
 
@@ -17,6 +18,7 @@ Kids pick a picture, tap regions to fill them with color, and the app **suggests
 3. **Big touch targets.** Minimum 60–80pt for kid-facing buttons, thick outlines (6–10pt).
 4. **No failure states.** Nothing is ever "wrong". Every action gets positive feedback.
 5. **Minimal choices.** Show 5–8 colors at a time, no full color picker.
+9. **Original characters only.** No existing franchise characters (names, look, logos, emblems, music), e.g. no PAW Patrol, Marvel, DC, Disney. We have no license, and App Store guideline 5.2 rejects them.
 6. **Never crash on bad data.** Corrupt or unknown saved data is skipped or reset, never fatal.
 7. **Kids Category compliant.** Parental gate for anything outside the kid area. No external links, no IAP or ads in the kid area.
 8. **Privacy label = "Data Not Collected".** Do not add features that collect photos, voice recordings or personal info from kids.
@@ -111,7 +113,7 @@ final class AppCoordinator {
 
 ## 5. Screens
 
-1. **Home** — big category tiles (Fruits, Vegetables).
+1. **Home** — big category tiles in a grid (2 columns on iPhone, 3–5 on iPad), then My Art. Categories with no drawings are hidden.
 2. **Picker** — grid of large thumbnails; colored items show the child's version.
 3. **Coloring screen**
    - Centered drawing (no pinch-zoom in v1)
@@ -196,11 +198,19 @@ Each drawing has regions; each region has `suggested` colors.
 - **Fruits:** apple, banana, orange, strawberry, grapes, watermelon, pear, cherry, pineapple, mango
 - **Vegetables:** carrot, tomato, broccoli, eggplant, corn, potato, cucumber, pumpkin, onion, peas
 
+### Added content (v1.1)
+
+- **Vehicles:** car, bus, fire_truck, police_car, ambulance, train, airplane, boat, tractor, rocket
+- **Rescue Pups:** fire_pup, doctor_pup, builder_pup, swim_pup, farm_pup, mail_pup, garden_pup, snow_pup, chef_pup, pilot_pup
+- **Super Kids:** little_star, heart_boy, sun_hero, moon_hero, cloud_kid, flower_hero, rainbow_hero, cape_kitty, hero_bear, music_hero
+- Category raw values are stable forever: `fruits`, `vegetables`, `vehicles`, `rescue_pups`, `super_kids`.
+- All per-category UI and palette data lives in `CategoryDetails` (the only `switch` over `Category`).
+
 ### Art rules
 
 - Thick black outlines, 3–6 large regions per drawing, friendly faces encouraged.
 - Every fillable region is a closed path with a stable `id` matching the JSON.
-- Base palette: red, orange, yellow, green, blue, purple, pink, brown, black, white (eraser).
+- Base palette: red, orange, yellow, green, blue, light blue, purple, pink, gray, brown (`KidPalette.base`). Each category shows 8 of them (`CategoryDetails.palette`). No pure black fill (it hides the outlines); the eraser clears to white. Saved colors outside a category's palette still render.
 
 ## 8. Local storage rules (important)
 
@@ -322,5 +332,5 @@ Tests/
 ## 12. Roadmap
 
 - **v1 (MVP):** 10 fruits + 10 vegetables, tap-to-fill, **crayon/freehand mode**, suggested-color glow, Hint, Magic, Undo, Eraser, voice names, celebration, gallery, parent area, local profiles. MVVM + Coordinator architecture.
-- **v1.1:** Stickers, crayon texture and brush sizes, second language (e.g. Arabic).
-- **v2:** More categories (animals, vehicles, shapes), simple quiz games ("Find the red fruit"), iPad layout, Apple Pencil, optional CloudKit sync.
+- **v1.1:** Vehicles, Rescue Pups and Super Kids categories (30 drawings), per-category palettes, Home grid. Then: stickers, crayon texture and brush sizes.
+- **v2:** More categories (animals, shapes), simple quiz games ("Find the red fruit"), iPad layout, Apple Pencil, optional CloudKit sync.

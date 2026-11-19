@@ -14,6 +14,27 @@
         "en": "category_vegetables_en.m4a",
         "ar": "category_vegetables_ar.m4a"
       }
+    },
+    {
+      "id": "vehicles",
+      "nameAudio": {
+        "en": "category_vehicles_en.m4a",
+        "ar": "category_vehicles_ar.m4a"
+      }
+    },
+    {
+      "id": "rescue_pups",
+      "nameAudio": {
+        "en": "category_rescue_pups_en.m4a",
+        "ar": "category_rescue_pups_ar.m4a"
+      }
+    },
+    {
+      "id": "super_kids",
+      "nameAudio": {
+        "en": "category_super_kids_en.m4a",
+        "ar": "category_super_kids_ar.m4a"
+      }
     }
   ],
   "items": [
@@ -940,6 +961,1681 @@
           "id": "rightPea",
           "suggested": [
             "#43A047",
+            "#FDD835"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "car",
+      "category": "vehicles",
+      "svg": "car.svg",
+      "name": {
+        "en": "Car",
+        "ar": "سيارة"
+      },
+      "colorSentence": {
+        "en": "Cars can be red!",
+        "ar": "السيارات يمكن أن تكون حمراء!"
+      },
+      "nameAudio": {
+        "en": "car_en.m4a",
+        "ar": "car_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "car_sentence_en.m4a",
+        "ar": "car_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "body",
+          "suggested": [
+            "#E53935",
+            "#1E88E5",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "window",
+          "suggested": [
+            "#81D4FA"
+          ]
+        },
+        {
+          "id": "backWheel",
+          "suggested": [
+            "#78909C"
+          ]
+        },
+        {
+          "id": "frontWheel",
+          "suggested": [
+            "#78909C"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bus",
+      "category": "vehicles",
+      "svg": "bus.svg",
+      "name": {
+        "en": "Bus",
+        "ar": "حافلة"
+      },
+      "colorSentence": {
+        "en": "Buses can be yellow!",
+        "ar": "الحافلات يمكن أن تكون صفراء!"
+      },
+      "nameAudio": {
+        "en": "bus_en.m4a",
+        "ar": "bus_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "bus_sentence_en.m4a",
+        "ar": "bus_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "body",
+          "suggested": [
+            "#FDD835",
+            "#FB8C00"
+          ]
+        },
+        {
+          "id": "windows",
+          "suggested": [
+            "#81D4FA"
+          ]
+        },
+        {
+          "id": "door",
+          "suggested": [
+            "#81D4FA",
+            "#78909C"
+          ]
+        },
+        {
+          "id": "backWheel",
+          "suggested": [
+            "#78909C"
+          ]
+        },
+        {
+          "id": "frontWheel",
+          "suggested": [
+            "#78909C"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fire_truck",
+      "category": "vehicles",
+      "svg": "fire_truck.svg",
+      "name": {
+        "en": "Fire truck",
+        "ar": "سيارة إطفاء"
+      },
+      "colorSentence": {
+        "en": "Fire trucks are red!",
+        "ar": "سيارات الإطفاء حمراء!"
+      },
+      "nameAudio": {
+        "en": "fire_truck_en.m4a",
+        "ar": "fire_truck_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "fire_truck_sentence_en.m4a",
+        "ar": "fire_truck_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "body",
+          "suggested": [
+            "#E53935"
+          ]
+        },
+        {
+          "id": "ladder",
+          "suggested": [
+            "#78909C",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "window",
+          "suggested": [
+            "#81D4FA"
+          ]
+        },
+        {
+          "id": "backWheel",
+          "suggested": [
+            "#78909C"
+          ]
+        },
+        {
+          "id": "frontWheel",
+          "suggested": [
+            "#78909C"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "police_car",
+      "category": "vehicles",
+      "svg": "police_car.svg",
+      "name": {
+        "en": "Police car",
+        "ar": "سيارة شرطة"
+      },
+      "colorSentence": {
+        "en": "Police cars can be blue!",
+        "ar": "سيارات الشرطة يمكن أن تكون زرقاء!"
+      },
+      "nameAudio": {
+        "en": "police_car_en.m4a",
+        "ar": "police_car_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "police_car_sentence_en.m4a",
+        "ar": "police_car_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "light",
+          "suggested": [
+            "#E53935",
+            "#1E88E5"
+          ]
+        },
+        {
+          "id": "body",
+          "suggested": [
+            "#1E88E5"
+          ]
+        },
+        {
+          "id": "window",
+          "suggested": [
+            "#81D4FA"
+          ]
+        },
+        {
+          "id": "backWheel",
+          "suggested": [
+            "#78909C"
+          ]
+        },
+        {
+          "id": "frontWheel",
+          "suggested": [
+            "#78909C"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ambulance",
+      "category": "vehicles",
+      "svg": "ambulance.svg",
+      "name": {
+        "en": "Ambulance",
+        "ar": "سيارة إسعاف"
+      },
+      "colorSentence": {
+        "en": "Ambulances help people!",
+        "ar": "سيارات الإسعاف تساعد الناس!"
+      },
+      "nameAudio": {
+        "en": "ambulance_en.m4a",
+        "ar": "ambulance_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "ambulance_sentence_en.m4a",
+        "ar": "ambulance_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "body",
+          "suggested": [
+            "#FDD835",
+            "#E53935"
+          ]
+        },
+        {
+          "id": "window",
+          "suggested": [
+            "#81D4FA"
+          ]
+        },
+        {
+          "id": "stripe",
+          "suggested": [
+            "#E53935",
+            "#1E88E5"
+          ]
+        },
+        {
+          "id": "heart",
+          "suggested": [
+            "#E53935"
+          ]
+        },
+        {
+          "id": "backWheel",
+          "suggested": [
+            "#78909C"
+          ]
+        },
+        {
+          "id": "frontWheel",
+          "suggested": [
+            "#78909C"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "train",
+      "category": "vehicles",
+      "svg": "train.svg",
+      "name": {
+        "en": "Train",
+        "ar": "قطار"
+      },
+      "colorSentence": {
+        "en": "Trains can be green!",
+        "ar": "القطارات يمكن أن تكون خضراء!"
+      },
+      "nameAudio": {
+        "en": "train_en.m4a",
+        "ar": "train_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "train_sentence_en.m4a",
+        "ar": "train_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "chimney",
+          "suggested": [
+            "#78909C"
+          ]
+        },
+        {
+          "id": "engine",
+          "suggested": [
+            "#43A047",
+            "#E53935"
+          ]
+        },
+        {
+          "id": "cab",
+          "suggested": [
+            "#1E88E5"
+          ]
+        },
+        {
+          "id": "wheels",
+          "suggested": [
+            "#78909C"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "airplane",
+      "category": "vehicles",
+      "svg": "airplane.svg",
+      "name": {
+        "en": "Airplane",
+        "ar": "طائرة"
+      },
+      "colorSentence": {
+        "en": "Airplanes fly in the blue sky!",
+        "ar": "الطائرات تطير في السماء الزرقاء!"
+      },
+      "nameAudio": {
+        "en": "airplane_en.m4a",
+        "ar": "airplane_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "airplane_sentence_en.m4a",
+        "ar": "airplane_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "tail",
+          "suggested": [
+            "#E53935",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "body",
+          "suggested": [
+            "#1E88E5",
+            "#E53935"
+          ]
+        },
+        {
+          "id": "wings",
+          "suggested": [
+            "#78909C",
+            "#1E88E5"
+          ]
+        },
+        {
+          "id": "windows",
+          "suggested": [
+            "#81D4FA"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "boat",
+      "category": "vehicles",
+      "svg": "boat.svg",
+      "name": {
+        "en": "Boat",
+        "ar": "قارب"
+      },
+      "colorSentence": {
+        "en": "Boats float on blue water!",
+        "ar": "القوارب تطفو على الماء الأزرق!"
+      },
+      "nameAudio": {
+        "en": "boat_en.m4a",
+        "ar": "boat_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "boat_sentence_en.m4a",
+        "ar": "boat_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "sail",
+          "suggested": [
+            "#FB8C00",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "cabin",
+          "suggested": [
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "hull",
+          "suggested": [
+            "#E53935",
+            "#1E88E5"
+          ]
+        },
+        {
+          "id": "water",
+          "suggested": [
+            "#1E88E5",
+            "#81D4FA"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tractor",
+      "category": "vehicles",
+      "svg": "tractor.svg",
+      "name": {
+        "en": "Tractor",
+        "ar": "جرار"
+      },
+      "colorSentence": {
+        "en": "Tractors can be green!",
+        "ar": "الجرارات يمكن أن تكون خضراء!"
+      },
+      "nameAudio": {
+        "en": "tractor_en.m4a",
+        "ar": "tractor_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "tractor_sentence_en.m4a",
+        "ar": "tractor_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "body",
+          "suggested": [
+            "#43A047",
+            "#E53935"
+          ]
+        },
+        {
+          "id": "cab",
+          "suggested": [
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "bigWheel",
+          "suggested": [
+            "#78909C"
+          ]
+        },
+        {
+          "id": "smallWheel",
+          "suggested": [
+            "#78909C"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rocket",
+      "category": "vehicles",
+      "svg": "rocket.svg",
+      "name": {
+        "en": "Rocket",
+        "ar": "صاروخ"
+      },
+      "colorSentence": {
+        "en": "Rockets have orange flames!",
+        "ar": "الصواريخ لها نار برتقالية!"
+      },
+      "nameAudio": {
+        "en": "rocket_en.m4a",
+        "ar": "rocket_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "rocket_sentence_en.m4a",
+        "ar": "rocket_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "flame",
+          "suggested": [
+            "#FB8C00",
+            "#FDD835",
+            "#E53935"
+          ]
+        },
+        {
+          "id": "fins",
+          "suggested": [
+            "#E53935",
+            "#FB8C00"
+          ]
+        },
+        {
+          "id": "body",
+          "suggested": [
+            "#78909C",
+            "#E53935",
+            "#1E88E5"
+          ]
+        },
+        {
+          "id": "window",
+          "suggested": [
+            "#81D4FA"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fire_pup",
+      "category": "rescue_pups",
+      "svg": "fire_pup.svg",
+      "name": {
+        "en": "Fire Pup",
+        "ar": "جرو الإطفاء"
+      },
+      "colorSentence": {
+        "en": "Fire Pup has a red helmet!",
+        "ar": "جرو الإطفاء يلبس خوذة حمراء!"
+      },
+      "nameAudio": {
+        "en": "fire_pup_en.m4a",
+        "ar": "fire_pup_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "fire_pup_sentence_en.m4a",
+        "ar": "fire_pup_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "ears",
+          "suggested": [
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "fur",
+          "suggested": [
+            "#6D4C41",
+            "#FDD835",
+            "#78909C"
+          ]
+        },
+        {
+          "id": "helmet",
+          "suggested": [
+            "#E53935"
+          ]
+        },
+        {
+          "id": "vest",
+          "suggested": [
+            "#FDD835",
+            "#FB8C00"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doctor_pup",
+      "category": "rescue_pups",
+      "svg": "doctor_pup.svg",
+      "name": {
+        "en": "Doctor Pup",
+        "ar": "جرو الطبيب"
+      },
+      "colorSentence": {
+        "en": "Doctor Pup has a red bag!",
+        "ar": "جرو الطبيب معه حقيبة حمراء!"
+      },
+      "nameAudio": {
+        "en": "doctor_pup_en.m4a",
+        "ar": "doctor_pup_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "doctor_pup_sentence_en.m4a",
+        "ar": "doctor_pup_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "ears",
+          "suggested": [
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "fur",
+          "suggested": [
+            "#FDD835",
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "coat",
+          "suggested": [
+            "#1E88E5",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "bag",
+          "suggested": [
+            "#E53935"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "builder_pup",
+      "category": "rescue_pups",
+      "svg": "builder_pup.svg",
+      "name": {
+        "en": "Builder Pup",
+        "ar": "جرو البناء"
+      },
+      "colorSentence": {
+        "en": "Builder Pup has a hard hat!",
+        "ar": "جرو البناء يلبس خوذة البناء!"
+      },
+      "nameAudio": {
+        "en": "builder_pup_en.m4a",
+        "ar": "builder_pup_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "builder_pup_sentence_en.m4a",
+        "ar": "builder_pup_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "ears",
+          "suggested": [
+            "#6D4C41",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "fur",
+          "suggested": [
+            "#FDD835",
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "hat",
+          "suggested": [
+            "#FB8C00",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "vest",
+          "suggested": [
+            "#43A047",
+            "#FB8C00"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swim_pup",
+      "category": "rescue_pups",
+      "svg": "swim_pup.svg",
+      "name": {
+        "en": "Swim Pup",
+        "ar": "جرو السباحة"
+      },
+      "colorSentence": {
+        "en": "Swim Pup loves blue water!",
+        "ar": "جرو السباحة يحب الماء الأزرق!"
+      },
+      "nameAudio": {
+        "en": "swim_pup_en.m4a",
+        "ar": "swim_pup_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "swim_pup_sentence_en.m4a",
+        "ar": "swim_pup_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "ears",
+          "suggested": [
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "fur",
+          "suggested": [
+            "#FDD835",
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "ring",
+          "suggested": [
+            "#E53935",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "water",
+          "suggested": [
+            "#1E88E5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "farm_pup",
+      "category": "rescue_pups",
+      "svg": "farm_pup.svg",
+      "name": {
+        "en": "Farm Pup",
+        "ar": "جرو المزرعة"
+      },
+      "colorSentence": {
+        "en": "Farm Pup has an orange carrot!",
+        "ar": "جرو المزرعة معه جزرة برتقالية!"
+      },
+      "nameAudio": {
+        "en": "farm_pup_en.m4a",
+        "ar": "farm_pup_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "farm_pup_sentence_en.m4a",
+        "ar": "farm_pup_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "ears",
+          "suggested": [
+            "#78909C",
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "fur",
+          "suggested": [
+            "#78909C",
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "hat",
+          "suggested": [
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "scarf",
+          "suggested": [
+            "#E53935",
+            "#1E88E5"
+          ]
+        },
+        {
+          "id": "carrot",
+          "suggested": [
+            "#FB8C00"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mail_pup",
+      "category": "rescue_pups",
+      "svg": "mail_pup.svg",
+      "name": {
+        "en": "Mail Pup",
+        "ar": "جرو البريد"
+      },
+      "colorSentence": {
+        "en": "Mail Pup brings the letters!",
+        "ar": "جرو البريد يحمل الرسائل!"
+      },
+      "nameAudio": {
+        "en": "mail_pup_en.m4a",
+        "ar": "mail_pup_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "mail_pup_sentence_en.m4a",
+        "ar": "mail_pup_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "ears",
+          "suggested": [
+            "#6D4C41",
+            "#78909C"
+          ]
+        },
+        {
+          "id": "fur",
+          "suggested": [
+            "#78909C",
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "cap",
+          "suggested": [
+            "#43A047",
+            "#E53935"
+          ]
+        },
+        {
+          "id": "letter",
+          "suggested": [
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "bag",
+          "suggested": [
+            "#6D4C41",
+            "#E53935"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "garden_pup",
+      "category": "rescue_pups",
+      "svg": "garden_pup.svg",
+      "name": {
+        "en": "Garden Pup",
+        "ar": "جرو الحديقة"
+      },
+      "colorSentence": {
+        "en": "Garden Pup waters the flowers!",
+        "ar": "جرو الحديقة يسقي الزهور!"
+      },
+      "nameAudio": {
+        "en": "garden_pup_en.m4a",
+        "ar": "garden_pup_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "garden_pup_sentence_en.m4a",
+        "ar": "garden_pup_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "ears",
+          "suggested": [
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "fur",
+          "suggested": [
+            "#FDD835",
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "can",
+          "suggested": [
+            "#43A047",
+            "#1E88E5"
+          ]
+        },
+        {
+          "id": "flower",
+          "suggested": [
+            "#E53935",
+            "#8E24AA",
+            "#FDD835"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "snow_pup",
+      "category": "rescue_pups",
+      "svg": "snow_pup.svg",
+      "name": {
+        "en": "Snow Pup",
+        "ar": "جرو الثلج"
+      },
+      "colorSentence": {
+        "en": "Snow Pup has a warm hat!",
+        "ar": "جرو الثلج يلبس قبعة دافئة!"
+      },
+      "nameAudio": {
+        "en": "snow_pup_en.m4a",
+        "ar": "snow_pup_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "snow_pup_sentence_en.m4a",
+        "ar": "snow_pup_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "ears",
+          "suggested": [
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "fur",
+          "suggested": [
+            "#6D4C41",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "hat",
+          "suggested": [
+            "#E53935",
+            "#1E88E5"
+          ]
+        },
+        {
+          "id": "scarf",
+          "suggested": [
+            "#43A047",
+            "#FB8C00"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chef_pup",
+      "category": "rescue_pups",
+      "svg": "chef_pup.svg",
+      "name": {
+        "en": "Chef Pup",
+        "ar": "جرو الطاهي"
+      },
+      "colorSentence": {
+        "en": "Chef Pup made a cupcake!",
+        "ar": "جرو الطاهي صنع كعكة صغيرة!"
+      },
+      "nameAudio": {
+        "en": "chef_pup_en.m4a",
+        "ar": "chef_pup_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "chef_pup_sentence_en.m4a",
+        "ar": "chef_pup_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "ears",
+          "suggested": [
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "fur",
+          "suggested": [
+            "#6D4C41",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "hat",
+          "suggested": [
+            "#78909C",
+            "#1E88E5"
+          ]
+        },
+        {
+          "id": "apron",
+          "suggested": [
+            "#1E88E5",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "cupcake",
+          "suggested": [
+            "#8E24AA",
+            "#E53935"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pilot_pup",
+      "category": "rescue_pups",
+      "svg": "pilot_pup.svg",
+      "name": {
+        "en": "Pilot Pup",
+        "ar": "جرو الطيار"
+      },
+      "colorSentence": {
+        "en": "Pilot Pup flies a red plane!",
+        "ar": "جرو الطيار يقود طائرة حمراء!"
+      },
+      "nameAudio": {
+        "en": "pilot_pup_en.m4a",
+        "ar": "pilot_pup_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "pilot_pup_sentence_en.m4a",
+        "ar": "pilot_pup_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "ears",
+          "suggested": [
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "fur",
+          "suggested": [
+            "#FDD835",
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "goggles",
+          "suggested": [
+            "#1E88E5",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "plane",
+          "suggested": [
+            "#E53935",
+            "#FB8C00"
+          ]
+        },
+        {
+          "id": "wing",
+          "suggested": [
+            "#78909C",
+            "#1E88E5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "little_star",
+      "category": "super_kids",
+      "svg": "little_star.svg",
+      "name": {
+        "en": "Little Star",
+        "ar": "النجمة الصغيرة"
+      },
+      "colorSentence": {
+        "en": "Little Star has a yellow star!",
+        "ar": "النجمة الصغيرة معها نجمة صفراء!"
+      },
+      "nameAudio": {
+        "en": "little_star_en.m4a",
+        "ar": "little_star_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "little_star_sentence_en.m4a",
+        "ar": "little_star_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "cape",
+          "suggested": [
+            "#F06292",
+            "#E53935"
+          ]
+        },
+        {
+          "id": "suit",
+          "suggested": [
+            "#8E24AA",
+            "#1E88E5"
+          ]
+        },
+        {
+          "id": "boots",
+          "suggested": [
+            "#FDD835",
+            "#F06292"
+          ]
+        },
+        {
+          "id": "face",
+          "suggested": [
+            "#6D4C41",
+            "#FB8C00",
+            "#F06292"
+          ]
+        },
+        {
+          "id": "mask",
+          "suggested": [
+            "#1E88E5",
+            "#8E24AA",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "emblem",
+          "suggested": [
+            "#FDD835"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heart_boy",
+      "category": "super_kids",
+      "svg": "heart_boy.svg",
+      "name": {
+        "en": "Heart Boy",
+        "ar": "فتى القلب"
+      },
+      "colorSentence": {
+        "en": "Heart Boy has a red heart!",
+        "ar": "فتى القلب معه قلب أحمر!"
+      },
+      "nameAudio": {
+        "en": "heart_boy_en.m4a",
+        "ar": "heart_boy_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "heart_boy_sentence_en.m4a",
+        "ar": "heart_boy_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "cape",
+          "suggested": [
+            "#E53935"
+          ]
+        },
+        {
+          "id": "suit",
+          "suggested": [
+            "#43A047",
+            "#1E88E5"
+          ]
+        },
+        {
+          "id": "boots",
+          "suggested": [
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "face",
+          "suggested": [
+            "#FB8C00",
+            "#F06292",
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "mask",
+          "suggested": [
+            "#1E88E5",
+            "#8E24AA",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "emblem",
+          "suggested": [
+            "#E53935",
+            "#F06292"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sun_hero",
+      "category": "super_kids",
+      "svg": "sun_hero.svg",
+      "name": {
+        "en": "Sun Hero",
+        "ar": "بطل الشمس"
+      },
+      "colorSentence": {
+        "en": "Sun Hero is bright yellow!",
+        "ar": "بطل الشمس أصفر لامع!"
+      },
+      "nameAudio": {
+        "en": "sun_hero_en.m4a",
+        "ar": "sun_hero_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "sun_hero_sentence_en.m4a",
+        "ar": "sun_hero_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "cape",
+          "suggested": [
+            "#E53935"
+          ]
+        },
+        {
+          "id": "suit",
+          "suggested": [
+            "#FB8C00",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "boots",
+          "suggested": [
+            "#FB8C00",
+            "#E53935"
+          ]
+        },
+        {
+          "id": "face",
+          "suggested": [
+            "#F06292",
+            "#6D4C41",
+            "#FB8C00"
+          ]
+        },
+        {
+          "id": "mask",
+          "suggested": [
+            "#1E88E5",
+            "#8E24AA",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "emblem",
+          "suggested": [
+            "#FDD835"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moon_hero",
+      "category": "super_kids",
+      "svg": "moon_hero.svg",
+      "name": {
+        "en": "Moon Hero",
+        "ar": "بطل القمر"
+      },
+      "colorSentence": {
+        "en": "Moon Hero has a yellow moon!",
+        "ar": "بطل القمر معه قمر أصفر!"
+      },
+      "nameAudio": {
+        "en": "moon_hero_en.m4a",
+        "ar": "moon_hero_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "moon_hero_sentence_en.m4a",
+        "ar": "moon_hero_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "cape",
+          "suggested": [
+            "#8E24AA"
+          ]
+        },
+        {
+          "id": "suit",
+          "suggested": [
+            "#1E88E5",
+            "#8E24AA"
+          ]
+        },
+        {
+          "id": "boots",
+          "suggested": [
+            "#1E88E5",
+            "#8E24AA"
+          ]
+        },
+        {
+          "id": "face",
+          "suggested": [
+            "#6D4C41",
+            "#FB8C00",
+            "#F06292"
+          ]
+        },
+        {
+          "id": "mask",
+          "suggested": [
+            "#1E88E5",
+            "#8E24AA",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "emblem",
+          "suggested": [
+            "#FDD835"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cloud_kid",
+      "category": "super_kids",
+      "svg": "cloud_kid.svg",
+      "name": {
+        "en": "Cloud Kid",
+        "ar": "طفل الغيمة"
+      },
+      "colorSentence": {
+        "en": "Cloud Kid rides a fluffy cloud!",
+        "ar": "طفل الغيمة يركب غيمة ناعمة!"
+      },
+      "nameAudio": {
+        "en": "cloud_kid_en.m4a",
+        "ar": "cloud_kid_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "cloud_kid_sentence_en.m4a",
+        "ar": "cloud_kid_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "cape",
+          "suggested": [
+            "#F06292"
+          ]
+        },
+        {
+          "id": "suit",
+          "suggested": [
+            "#1E88E5",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "cloud",
+          "suggested": [
+            "#8E24AA",
+            "#F06292",
+            "#1E88E5"
+          ]
+        },
+        {
+          "id": "face",
+          "suggested": [
+            "#FB8C00",
+            "#F06292",
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "mask",
+          "suggested": [
+            "#1E88E5",
+            "#8E24AA",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "emblem",
+          "suggested": [
+            "#1E88E5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flower_hero",
+      "category": "super_kids",
+      "svg": "flower_hero.svg",
+      "name": {
+        "en": "Flower Hero",
+        "ar": "بطل الزهرة"
+      },
+      "colorSentence": {
+        "en": "Flower Hero loves flowers!",
+        "ar": "بطل الزهرة يحب الزهور!"
+      },
+      "nameAudio": {
+        "en": "flower_hero_en.m4a",
+        "ar": "flower_hero_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "flower_hero_sentence_en.m4a",
+        "ar": "flower_hero_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "cape",
+          "suggested": [
+            "#F06292",
+            "#8E24AA"
+          ]
+        },
+        {
+          "id": "suit",
+          "suggested": [
+            "#43A047"
+          ]
+        },
+        {
+          "id": "boots",
+          "suggested": [
+            "#43A047",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "face",
+          "suggested": [
+            "#F06292",
+            "#6D4C41",
+            "#FB8C00"
+          ]
+        },
+        {
+          "id": "mask",
+          "suggested": [
+            "#1E88E5",
+            "#8E24AA",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "emblem",
+          "suggested": [
+            "#FDD835",
+            "#E53935",
+            "#F06292"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rainbow_hero",
+      "category": "super_kids",
+      "svg": "rainbow_hero.svg",
+      "name": {
+        "en": "Rainbow Hero",
+        "ar": "بطل قوس قزح"
+      },
+      "colorSentence": {
+        "en": "Rainbow Hero has every color!",
+        "ar": "بطل قوس قزح عنده كل الألوان!"
+      },
+      "nameAudio": {
+        "en": "rainbow_hero_en.m4a",
+        "ar": "rainbow_hero_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "rainbow_hero_sentence_en.m4a",
+        "ar": "rainbow_hero_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "cape",
+          "suggested": [
+            "#E53935",
+            "#FB8C00"
+          ]
+        },
+        {
+          "id": "suit",
+          "suggested": [
+            "#1E88E5"
+          ]
+        },
+        {
+          "id": "boots",
+          "suggested": [
+            "#8E24AA",
+            "#E53935"
+          ]
+        },
+        {
+          "id": "face",
+          "suggested": [
+            "#6D4C41",
+            "#FB8C00",
+            "#F06292"
+          ]
+        },
+        {
+          "id": "mask",
+          "suggested": [
+            "#1E88E5",
+            "#8E24AA",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "emblem",
+          "suggested": [
+            "#FDD835",
+            "#E53935",
+            "#43A047"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cape_kitty",
+      "category": "super_kids",
+      "svg": "cape_kitty.svg",
+      "name": {
+        "en": "Cape Kitty",
+        "ar": "القطة البطلة"
+      },
+      "colorSentence": {
+        "en": "Cape Kitty has a red cape!",
+        "ar": "القطة البطلة تلبس رداءً أحمر!"
+      },
+      "nameAudio": {
+        "en": "cape_kitty_en.m4a",
+        "ar": "cape_kitty_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "cape_kitty_sentence_en.m4a",
+        "ar": "cape_kitty_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "cape",
+          "suggested": [
+            "#E53935",
+            "#1E88E5"
+          ]
+        },
+        {
+          "id": "fur",
+          "suggested": [
+            "#FB8C00",
+            "#FDD835",
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "mask",
+          "suggested": [
+            "#8E24AA",
+            "#1E88E5"
+          ]
+        },
+        {
+          "id": "emblem",
+          "suggested": [
+            "#FDD835"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hero_bear",
+      "category": "super_kids",
+      "svg": "hero_bear.svg",
+      "name": {
+        "en": "Hero Bear",
+        "ar": "الدب البطل"
+      },
+      "colorSentence": {
+        "en": "Hero Bear has a yellow belt!",
+        "ar": "الدب البطل يلبس حزامًا أصفر!"
+      },
+      "nameAudio": {
+        "en": "hero_bear_en.m4a",
+        "ar": "hero_bear_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "hero_bear_sentence_en.m4a",
+        "ar": "hero_bear_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "cape",
+          "suggested": [
+            "#1E88E5",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "fur",
+          "suggested": [
+            "#6D4C41",
+            "#FB8C00",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "emblem",
+          "suggested": [
+            "#E53935",
+            "#FDD835"
+          ]
+        },
+        {
+          "id": "belt",
+          "suggested": [
+            "#FDD835"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "music_hero",
+      "category": "super_kids",
+      "svg": "music_hero.svg",
+      "name": {
+        "en": "Music Hero",
+        "ar": "بطل الموسيقى"
+      },
+      "colorSentence": {
+        "en": "Music Hero loves to sing!",
+        "ar": "بطل الموسيقى يحب الغناء!"
+      },
+      "nameAudio": {
+        "en": "music_hero_en.m4a",
+        "ar": "music_hero_ar.m4a"
+      },
+      "colorSentenceAudio": {
+        "en": "music_hero_sentence_en.m4a",
+        "ar": "music_hero_sentence_ar.m4a"
+      },
+      "regions": [
+        {
+          "id": "cape",
+          "suggested": [
+            "#1E88E5"
+          ]
+        },
+        {
+          "id": "suit",
+          "suggested": [
+            "#F06292",
+            "#8E24AA"
+          ]
+        },
+        {
+          "id": "boots",
+          "suggested": [
+            "#E53935"
+          ]
+        },
+        {
+          "id": "face",
+          "suggested": [
+            "#FB8C00",
+            "#F06292",
+            "#6D4C41"
+          ]
+        },
+        {
+          "id": "mask",
+          "suggested": [
+            "#1E88E5",
+            "#8E24AA",
+            "#43A047"
+          ]
+        },
+        {
+          "id": "emblem",
+          "suggested": [
             "#FDD835"
           ]
         }

@@ -136,5 +136,20 @@ struct AccessibilityTests {
         #expect(DrawingCanvas.spokenName("leftLeaf") == "left leaf")
         #expect(DrawingCanvas.spokenName("body") == "body")
         #expect(DrawingCanvas.spokenName("whiteRind") == "white rind")
+        #expect(DrawingCanvas.spokenName("front_wheel") == "front wheel")
+        #expect(DrawingCanvas.spokenName("bigWheel") == "big wheel")
+    }
+
+    /// VoiceOver reads every part of every shipped drawing as plain lowercase words.
+    @Test func everyBundledPartHasASpokenName() {
+        let repo = ContentRepository(bundle: .main)
+        for item in KidsColoring.Category.allCases.flatMap({ repo.items(in: $0) }) {
+            for region in item.regions {
+                let name = DrawingCanvas.spokenName(region.id)
+                #expect(!name.isEmpty, "\(item.id).\(region.id)")
+                #expect(name.allSatisfy { $0.isLowercase || $0 == " " }, "\(item.id).\(region.id) reads as \(name)")
+                #expect(!name.contains("  "), "\(item.id).\(region.id)")
+            }
+        }
     }
 }

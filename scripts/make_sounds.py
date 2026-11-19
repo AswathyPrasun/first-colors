@@ -7,6 +7,7 @@ Run from the repo root:  python3 scripts/make_sounds.py
 Everything is soft and short on purpose: these play hundreds of times in a session.
 """
 import math
+import sys
 import os
 import random
 import struct
@@ -124,6 +125,61 @@ def music_loop():
     return out[: int(length * RATE)]
 
 
+def vroom():
+    # Finishing a vehicle: a soft toy-engine "vroom" that revs up and drives away.
+    out = []
+    dur = 0.9
+    phase = 0.0
+    for i in range(int(dur * RATE)):
+        t = i / RATE
+        freq = 70 + 90 * math.sin(math.pi * min(t / 0.6, 1.0) / 2) + 6 * math.sin(2 * math.pi * 22 * t)
+        phase += 2 * math.pi * freq / RATE
+        # Rounded saw-like tone: a few odd and even partials.
+        tone = sum(math.sin(k * phase) / k for k in range(1, 7))
+        env = min(1.0, t / 0.06) * (1.0 if t < 0.55 else math.exp(-6 * (t - 0.55)))
+        out.append(0.16 * env * tone)
+    return fade(out, 20)
+
+
+def woof():
+    # Finishing a Rescue Pup: a playful two-note "arf-arf" chime (a toy sound, not a real dog).
+    out = []
+    for k, start in enumerate([0.0, 0.2]):
+        bark = []
+        dur = 0.13
+        phase = 0.0
+        for i in range(int(dur * RATE)):
+            t = i / RATE
+            freq = (620 if k == 0 else 760) * (1.0 - 0.35 * t / dur)
+            phase += 2 * math.pi * freq / RATE
+            env = min(1.0, t / 0.008) * math.exp(-14 * t)
+            bark.append(0.3 * env * (math.sin(phase) + 0.35 * math.sin(2 * phase) + 0.15 * math.sin(3 * phase)))
+        mix(out, bark, start)
+    mix(out, note(1318.5, 0.35, vol=0.08, decay=8), 0.34)
+    return fade(out)
+
+
+def whoosh():
+    # Finishing a Super Kid: a quick airy swoosh rising past, with a tiny sparkle at the end.
+    rnd = random.Random(11)
+    out = []
+    dur = 0.7
+    low = band = 0.0
+    for i in range(int(dur * RATE)):
+        t = i / RATE
+        white = rnd.uniform(-1, 1)
+        # State-variable band-pass whose center sweeps upward.
+        center = 300 + 2600 * (t / dur) ** 1.5
+        f = 2 * math.sin(math.pi * center / RATE)
+        low += f * band
+        high = white - low - 0.6 * band
+        band += f * high
+        env = math.sin(math.pi * min(t / dur, 1.0)) ** 2
+        out.append(0.5 * env * band)
+    mix(out, note(2093, 0.25, vol=0.07, decay=10), 0.5)
+    return fade(out, 10)
+
+
 def write_m4a(name, samples, out_dir):
     peak = max(1e-9, max(abs(s) for s in samples))
     scale = min(1.0, 0.7 / peak)   # leave headroom (~-3 dB)
@@ -143,9 +199,13 @@ def main():
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     out_dir = os.path.join(root, "Resources", "Audio")
     os.makedirs(out_dir, exist_ok=True)
-    for name, make in [("sfx_tap", tap), ("sfx_pop", pop), ("sfx_sparkle", sparkle), ("sfx_cheer", cheer),
-                       ("sfx_crayon_loop", crayon_loop), ("music_loop", music_loop)]:
-        write_m4a(name, make(), out_dir)
+    makers = {"sfx_tap": tap, "sfx_pop": pop, "sfx_sparkle": sparkle, "sfx_cheer": cheer,
+              "sfx_crayon_loop": crayon_loop, "music_loop": music_loop,
+              "sfx_vroom": vroom, "sfx_woof": woof, "sfx_whoosh": whoosh}
+    # `python3 scripts/make_sounds.py sfx_vroom sfx_woof` regenerates only those.
+    wanted = sys.argv[1:] or list(makers)
+    for name in wanted:
+        write_m4a(name, makers[name](), out_dir)
 
 
 if __name__ == "__main__":

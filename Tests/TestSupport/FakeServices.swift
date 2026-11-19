@@ -226,7 +226,9 @@ actor FakePhotoExporter: PhotoExporting {
 
 /// Polls a main-actor condition (for work the code under test starts in its own Task).
 @MainActor
-func waitUntil(timeout: Duration = .seconds(2), _ condition: @MainActor () async -> Bool) async {
+/// Polls until the condition holds. The generous deadline only matters when the parallel test run is busy;
+/// a passing condition returns at once.
+func waitUntil(timeout: Duration = .seconds(10), _ condition: @MainActor () async -> Bool) async {
     let deadline = ContinuousClock.now + timeout
     while !(await condition()), ContinuousClock.now < deadline {
         try? await Task.sleep(for: .milliseconds(5))

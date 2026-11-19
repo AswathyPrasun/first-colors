@@ -6,6 +6,8 @@ final class CelebrationViewModel {
     let itemName: String
     /// e.g. "Apples can be red!" — falls back to the item name.
     let message: String
+    /// The big word above the message: "Yummy!", "Vroom!", "Woof woof!" or "Super!".
+    let cheer: LocalizedStringResource
     let drawing: Drawing?
     /// The child's finished picture, loaded from storage.
     private(set) var fills: [String: String] = [:]
@@ -18,6 +20,7 @@ final class CelebrationViewModel {
     @ObservationIgnored private let onColorMore: @MainActor () -> Void
     @ObservationIgnored private let onMyArt: @MainActor () -> Void
     @ObservationIgnored private var hasAppeared = false
+    @ObservationIgnored private let finishSound: SoundEffect?
 
     init(itemId: String,
          profileId: String,
@@ -33,6 +36,8 @@ final class CelebrationViewModel {
         self.itemName = item?.name.text(for: language) ?? ""
         self.message = item?.colorSentence?.text(for: language) ?? itemName
         self.drawing = content.drawing(for: itemId)
+        self.finishSound = item?.category.details.finishSound
+        self.cheer = item?.category.details.cheer ?? "Yummy!"
         self.audio = audio
         self.progress = progress
         self.onColorMore = onColorMore
@@ -44,6 +49,7 @@ final class CelebrationViewModel {
         guard !hasAppeared else { return }
         hasAppeared = true
         audio.play(.effect(.cheer))
+        if let finishSound { audio.play(.effect(finishSound)) }
         audio.play(.colorSentence(itemId: itemId))
     }
 

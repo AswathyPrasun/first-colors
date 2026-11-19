@@ -8,7 +8,8 @@ final class ColoringViewModel {
     let itemId: String
     let title: String
     let drawing: Drawing?
-    let palette: [PaletteColor] = KidPalette.colors
+    /// The 8 swatches for this picture's category. Saved colors outside it still render.
+    let palette: [PaletteColor]
 
     var selectedColor: PaletteColor = KidPalette.defaultColor
     private(set) var activeTool: ColoringTool = .fill
@@ -66,6 +67,8 @@ final class ColoringViewModel {
         // Unknown item ids (e.g. from an old save) still open a usable screen.
         self.title = content.item(id: itemId)?.name.text(for: language) ?? ""
         self.drawing = content.drawing(for: itemId)
+        self.palette = content.item(id: itemId)?.category.details.palette ?? KidPalette.colors
+        self.selectedColor = palette.first ?? KidPalette.defaultColor
         self.audio = audio
         self.progress = progress
         self.render = render

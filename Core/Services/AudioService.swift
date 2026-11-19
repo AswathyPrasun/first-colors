@@ -8,6 +8,10 @@ enum SoundEffect: String, Sendable, CaseIterable {
     case cheer
     /// Looped while the crayon is drawing.
     case crayon
+    /// Played with the cheer when a picture from that category is finished (`CategoryDetails.finishSound`).
+    case vroom
+    case woof
+    case whoosh
 
     var fileName: String {
         switch self {
@@ -59,8 +63,7 @@ struct AudioCatalog: Sendable {
         case .effect(let effect):
             return fileExists(effect.fileName) ? .file(effect.fileName) : .none
         case .categoryName(let category):
-            let text = category == .fruits ? (language == .ar ? "فواكه" : "Fruits")
-                                           : (language == .ar ? "خضروات" : "Veggies")
+            let text = category.details.spokenName.text(for: language)
             return voice(content.categoryInfo(category)?.nameAudio?.text(for: language), text: text, language: language)
         case .itemName(let itemId):
             let item = content.item(id: itemId)

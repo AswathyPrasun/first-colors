@@ -19,6 +19,28 @@ final class NavigationUITests: XCTestCase {
         return app
     }
 
+    /// Every category on Home opens its picker and Back returns Home. Categories without
+    /// drawings are hidden, so this covers whatever the bundle ships.
+    @MainActor
+    func testEveryCategoryOpensAndReturnsHome() {
+        let app = launchAsBear()
+        let ids = ["fruits", "vegetables", "vehicles", "rescue_pups", "super_kids"]
+        var opened = 0
+        for id in ids {
+            let tile = app.buttons["category.\(id)"]
+            guard tile.exists else { continue }
+            if !tile.isHittable { app.swipeUp() }
+            tile.tap()
+            XCTAssertTrue(app.buttons["back"].waitForExistence(timeout: 5), "\(id) opens its picker")
+            XCTAssertGreaterThan(app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH 'item.'")).count, 0,
+                                 "\(id) shows drawings")
+            app.buttons["back"].tap()
+            XCTAssertTrue(app.buttons["myArt"].waitForExistence(timeout: 5), "back on Home after \(id)")
+            opened += 1
+        }
+        XCTAssertGreaterThanOrEqual(opened, 2)
+    }
+
     /// The build prompt's acceptance flow: Home → Fruits → Apple → fill body red → Done →
     /// Celebration → My Art shows the apple.
     @MainActor

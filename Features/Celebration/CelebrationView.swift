@@ -17,7 +17,7 @@ struct CelebrationView: View {
             pictureCard
                 .frame(maxHeight: .infinity)
 
-            Text("Yummy!")
+            Text(vm.cheer)
                 .font(.kid(.display))
                 .foregroundStyle(DSColor.ink)
                 .accessibilityIdentifier("celebrationTitle")

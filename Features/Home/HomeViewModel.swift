@@ -3,7 +3,8 @@ import Foundation
 
 @MainActor @Observable
 final class HomeViewModel {
-    let categories: [Category] = Category.allCases
+    /// Categories in Home order. A category with no drawings yet is hidden, never shown empty.
+    let categories: [Category]
     /// Up to three of the active child's latest finished pictures.
     private(set) var latestArt: [CGImage] = []
 
@@ -24,6 +25,7 @@ final class HomeViewModel {
          onOpenGallery: @escaping @MainActor () -> Void,
          onOpenParentArea: @escaping @MainActor () -> Void,
          onSwitchProfile: @escaping @MainActor () -> Void) {
+        self.categories = Category.allCases.filter { !content.items(in: $0).isEmpty }
         self.audio = audio
         self.profiles = profiles
         self.content = content
@@ -42,8 +44,7 @@ final class HomeViewModel {
 
     /// The tile picture: a category's signature drawing, colored with its suggested colors.
     func illustration(for category: Category) -> (drawing: Drawing, fills: [String: String])? {
-        let itemId = category == .fruits ? "apple" : "carrot"
-        guard let drawing = content.drawing(for: itemId) else { return nil }
+        guard let drawing = content.drawing(for: category.details.coverItemId) else { return nil }
         return (drawing, FillEngine.magicFills(for: drawing, current: [:]))
     }
 

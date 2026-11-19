@@ -1,6 +1,15 @@
-# First Colors — App Store text (v1.0)
+# First Colors — App Store text (v1.1)
 
 Draft copy for App Store Connect. Keep it honest: everything below is in the app.
+
+## What's New (1.1)
+
+30 new pictures in three new categories!
+• Vehicles: a car, bus, fire truck, train, rocket and more, each with a friendly face
+• Rescue Pups: ten helpful puppies, from Fire Pup to Pilot Pup
+• Super Kids: ten little heroes with capes and happy emblems
+Each new category has its own colors (gray tires, light-blue windows) and its own celebration
+sound. The Home screen now fits all five categories on iPhone and iPad.
 
 ## What's New (1.0)
 
@@ -11,8 +20,8 @@ Works completely offline. No ads, no in-app purchases, no accounts.
 
 ## Promotional text (170 characters max)
 
-Tap, scribble and celebrate! 20 smiling fruits and veggies to color, made for little hands.
-No ads, no purchases, no internet needed.
+Tap, scribble and celebrate! 50 smiling pictures to color: fruits, veggies, vehicles, puppies and
+little heroes. No ads, no purchases, no internet needed.
 
 ## Description
 
@@ -29,9 +38,13 @@ GENTLE COLOR HELP
 • Hint shows a soft preview of real colors
 • Magic colors the whole picture in one tap
 
-20 FRIENDLY PICTURES
+50 FRIENDLY PICTURES IN 5 CATEGORIES
 • Fruits: apple, banana, orange, strawberry, grapes, watermelon, pear, cherry, pineapple, mango
 • Veggies: carrot, tomato, broccoli, eggplant, corn, potato, cucumber, pumpkin, onion, peas
+• Vehicles: car, bus, fire truck, police car, ambulance, train, airplane, boat, tractor, rocket
+• Rescue Pups: ten puppy helpers with fun jobs, like Fire Pup, Doctor Pup and Chef Pup
+• Super Kids: ten little heroes with capes, like Little Star, Cape Kitty and Hero Bear
+All characters are our own.
 
 CELEBRATE AND KEEP
 • Confetti and stars when a picture is done
@@ -50,7 +63,7 @@ SAFE AND PRIVATE
 
 ## Keywords (100 characters max)
 
-coloring,kids,toddler,preschool,fruits,vegetables,crayon,paint,drawing,colors,offline,learning
+coloring,kids,toddler,preschool,fruits,vegetables,vehicles,cars,puppy,heroes,crayon,drawing,offline
 
 ## App Store Connect settings
 
@@ -61,8 +74,8 @@ coloring,kids,toddler,preschool,fruits,vegetables,crayon,paint,drawing,colors,of
   no data and works offline (see `docs/RELEASE_CHECKLIST.md`).
 - Export compliance: no encryption (`ITSAppUsesNonExemptEncryption = NO` is already set).
 
-## Known limits in 1.0
+## Known limits
 
-- Voice lines play only once real recordings are added (see `Resources/Audio/README.md`).
+- Voice lines play only once real recordings are added (see `Resources/Audio/README.md`, 210 files).
   Release builds are silent for names and sentences until then; sound effects and music work.
 - Arabic text and voice need review by a native speaker before enabling Arabic in marketing.
